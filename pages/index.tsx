@@ -1,11 +1,19 @@
-export default function Home() {
+import Head from 'next/head'
+import Landing from '../components/landing'
 
+export default function Home() {
   return (
-    <h1 className="text-4xl flex items-center justify-center font-bold h-[100vh]">
-      Welcome to{' '}
-      <a className="underline font-semibold text-blue-400 hover:text-blue-500 cursor-pointer px-1 transition-all">
-        kroto.in
-      </a>
-    </h1>
+    <>
+      <Head>
+        <title>Kroto</title>
+        <meta property="og:title" content="Kroto - Learn Build Discuss" />
+        <meta property="og:image" content="/public/images/kroto-og.png" />
+        <meta
+          property="og:description"
+          content="This is the solution if you're struggling to learn to code by watching videos."
+        />
+      </Head>
+      <Landing />
+    </>
   )
 }
