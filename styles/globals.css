@@ -9,3 +9,11 @@
     font-family: Nunito;
   }
 }
+
+#left-side {
+    width: 60%;
+}
+
+#right-side {
+    width: 100%;
+}
