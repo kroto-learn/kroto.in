@@ -20,8 +20,8 @@ export default function Hero() {
           <h3 className="text-4xl font-bold ">I understand you pain.</h3>
           <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
             <a
-              href="#fact-section"
-              className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-2 text-base font-medium text-[#EF3054] hover:bg-gray-50 md:py-4 md:px-10 md:text-lg transition-all"
+              href="mailto:kamal@kroto.in"
+              className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-2 text-base font-medium text-[#EF3054] hover:bg-gray-100 md:py-4 md:px-10 md:text-lg transition-all "
             >
               Here's the Solution
               <span className="pl-2 transition-all">
