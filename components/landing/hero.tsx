@@ -23,7 +23,7 @@ export default function Hero() {
               href="mailto:kamal@kroto.in"
               className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-2 text-base font-medium text-[#EF3054] hover:bg-gray-100 md:py-4 md:px-10 md:text-lg transition-all "
             >
-              Here's the Solution
+              Here&apos;s the Solution
               <span className="pl-2 transition-all">
                 <IoArrowForwardOutline />
               </span>
