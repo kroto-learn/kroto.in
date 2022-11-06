@@ -25,22 +25,22 @@ export default function Hero() {
 
   return (
     <>
-      <div className="flex bg-[#EF3054] flex-col items-center justify-center min-h-screen w-full absolute">
-        <div className="flex-grow-0 z-10 pt-5 transition-opacity drop-shadow-[0_3px_1px_rgba(0,0,0,0.2)]">
+      <div className="flex bg-[#EF3054] flex-col items-center justify-center min-h-screen w-full  absolute">
+        <div className="flex-grow-0 z-10 pt-5 transition-opacity ">
           <Image src={logo} width={512 / 9} height={512 / 9} alt="logo" />
         </div>
-        <div className="flex z-10 w-8/12 gap-10 flex-1 flex-col items-center justify-center text-center text-white">
-          <div className="drop-shadow-[0_3px_1px_rgba(0,0,0,0.2)]">
+        <div className="flex z-10 w-8/12 gap-16 flex-1 flex-col items-center justify-center text-center text-white">
+          <div className="">
             <h1 className="text-3xl md:text-8xl mb-10 -mt-10">
               Are you{' '}
               <span className="text font font-extrabold">struggling</span> to
               learn to code
             </h1>
           </div>
-          <div className="mt-5 sm:mt-0 sm:ml-3 transition-all">
+          <div className="transition-all">
             <a
               href="mailto:kamal@kroto.in"
-              className="flex flex-col w-full items-center justify-center text-base font-extrabold gap-2 text-white hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-2xl transition-all"
+              className="flex flex-col w-full items-center justify-center text-base font-bold gap-2 text-white hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-4xl transition-all"
             >
               <span className="transition-all">Here&apos;s the Solution</span>
               <span className="transition-all animate-bounce">
