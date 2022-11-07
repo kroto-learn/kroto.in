@@ -19,7 +19,7 @@ export default function TutorialHell() {
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
               <div className="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
                 <img
-                  className="rounded-3xl object-cover object-center shadow-2xl"
+                  className="rounded-3xl object-cover object-center shadow-md"
                   src="https://res.cloudinary.com/practicaldev/image/fetch/s--I0cKpvYv--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://ivumwcqobobsryuftwyv.supabase.co/storage/v1/object/public/posts/d6c8f63f-467f-4de1-863e-6efc3fce4d90/cover_image/ad397583-081d-4332-84d6-96ab71f9ed50.png"
                   alt=""
                 />
@@ -27,7 +27,7 @@ export default function TutorialHell() {
             </div>
           </div>
 
-          <div className="relative bg-[#282c34] lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl">
+          <div className="relative shadow-lg bg-[#282c34] lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl">
             <div
               className="absolute inset-0 hidden overflow-hidden rounded-3xl lg:block"
               aria-hidden="true"
