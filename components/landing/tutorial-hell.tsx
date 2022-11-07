@@ -1,51 +1,82 @@
 import Link from 'next/link'
+import { IoArrowForward } from 'react-icons/io5'
+import { SVGBackground } from './hero'
 
 export default function TutorialHell() {
   return (
-    <section
-      id="solution-section"
-      className="bg-white py-20 text-3xl md:text-4xl"
-    >
-      <div className="container mx-auto px-11">
-        <h2 className="mx-auto mb-6 max-w-5xl text-6xl font-semibold xl:text-7xl">
-          So, What Is a <span className="font-bold">Tutorial Hell?</span>
-        </h2>
-        <p className="mx-auto my-10 max-w-5xl text-3xl ">
-          <strong>
-            A blockchain is a distributed database that is shared among the
-            nodes of a computer network.
-          </strong>{' '}
-        </p>
-        <p className="mx-auto my-10  max-w-5xl text-3xl ">
-          As a database, a blockchain stores information electronically in
-          digital format. Blockchains are best known for their crucial role in
-          cryptocurrency systems, such as{' '}
-          <DetailLink href="https://www.investopedia.com/terms/b/bitcoin.asp">
-            Bitcoin
-          </DetailLink>
-          , for maintaining a secure and decentralized record of transactions.
-          The innovation with a blockchain is that it guarantees the fidelity
-          and security of a record of data and generates trust without the need
-          for a trusted third party.
-        </p>
-        <p className="mx-auto my-10 max-w-5xl text-3xl leading-tight">
-          One key difference between a typical database and a blockchain is how
-          the data is structured. A blockchain collects information together in
-          groups, known as{' '}
-          <DetailLink href="https://www.investopedia.com/terms/b/block-bitcoin-block.asp">
-            blocks
-          </DetailLink>
-          , that hold sets of information.{' '}
-        </p>
-        <p className="mx-auto my-5 max-w-5xl text-3xl ">
-          Blocks have certain storage capacities and, when filled, are closed
-          and linked to the previously filled block, forming a chain of data
-          known as the blockchain. All new information that follows that freshly
-          added block is compiled into a newly formed block that will then also
-          be added to the chain once filled.
-        </p>
+    <div className="relative min-h-screen bg-[#282c34] lg:bg-white py-16">
+      <div
+        className="absolute inset-x-0 top-0 hidden h-1/2 bg-white lg:block"
+        aria-hidden="true"
+      />
+      <div className="mx-auto max-w-7xl bg-[#282c34] lg:bg-transparent lg:px-0">
+        <div className="lg:grid lg:grid-cols-12">
+          <div className="relative z-10 lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:bg-transparent lg:py-16">
+            <div
+              className="absolute inset-x-0 h-1/2 bg-[#282c34] lg:hidden"
+              aria-hidden="true"
+            />
+            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
+              <div className="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
+                <img
+                  className="rounded-3xl object-cover object-center shadow-2xl"
+                  src="https://res.cloudinary.com/practicaldev/image/fetch/s--I0cKpvYv--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://ivumwcqobobsryuftwyv.supabase.co/storage/v1/object/public/posts/d6c8f63f-467f-4de1-863e-6efc3fce4d90/cover_image/ad397583-081d-4332-84d6-96ab71f9ed50.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="relative bg-[#282c34] lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl">
+            <div
+              className="absolute inset-0 hidden overflow-hidden rounded-3xl lg:block"
+              aria-hidden="true"
+            >
+              <SVGBackground />
+            </div>
+            <div className="relative mx-auto max-w-md space-y-6 py-12 px-4 sm:max-w-2xl sm:py-16 sm:px-4 lg:col-span-6 lg:col-start-4 lg:max-w-none lg:p-0">
+              <div className="m-10 flex flex-col gap-10">
+                <h2
+                  className="text-4xl tracking-tight text-white"
+                  id="join-heading"
+                >
+                  So, What is a{' '}
+                  <span className="font-extrabold">Tutorial Hell?</span>
+                </h2>
+                <blockquote className="flex gap-1 flex-col border-l-4 px-4 rounded-md border-white text-lg text-white">
+                  <div>
+                    You <span className="uppercase font-bold">can&apos;t</span>{' '}
+                    learn to code by watching videos
+                  </div>
+                  <span className="font-bold">Fireship.io</span>
+                </blockquote>
+                <p className="text-2xl text-white">
+                  When learning by watching videos, we end up{' '}
+                  <span className="font-extrabold">copy-pasting the code</span>{' '}
+                  from the video.
+                </p>
+                <p className="text-2xl text-white">
+                  This copy-pasting is done by actively{' '}
+                  <span className="font-extrabold">
+                    typing out charachter to charachter, making us believe that
+                    we&apos;re actually coding
+                  </span>
+                </p>
+                <a
+                  className="flex flex-row max-w-xs -mx-10 z-40 items-center justify-center text-xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:text-2xl transition-all"
+                  href="#solution-section"
+                >
+                  Here&apos;s the Solution
+                  <span>
+                    <IoArrowForward />
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   )
 }
 
