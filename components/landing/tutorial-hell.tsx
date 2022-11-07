@@ -45,8 +45,8 @@ export default function TutorialHell() {
                 </h2>
                 <blockquote className="flex gap-1 flex-col border-l-4 px-4 rounded-md border-white text-lg text-white">
                   <div>
-                    You <span className="uppercase font-bold">can't</span> learn
-                    to code by watching videos
+                    You <span className="uppercase font-bold">can&apos;t</span>{' '}
+                    learn to code by watching videos
                   </div>
                   <span className="font-bold">Fireship.io</span>
                 </blockquote>
@@ -59,14 +59,14 @@ export default function TutorialHell() {
                   This copy-pasting is done by actively{' '}
                   <span className="font-extrabold">
                     typing out charachter to charachter, making us believe that
-                    we're actually coding
+                    we&apos;re actually coding
                   </span>
                 </p>
                 <a
                   className="flex flex-row max-w-xs -mx-10 z-40 items-center justify-center text-xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:text-2xl transition-all"
                   href="#solution-section"
                 >
-                  Here's the Solution
+                  Here&apos;s the Solution
                   <span>
                     <IoArrowForward />
                   </span>
