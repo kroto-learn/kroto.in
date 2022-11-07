@@ -4,16 +4,16 @@ import { SVGBackground } from './hero'
 
 export default function TutorialHell() {
   return (
-    <div className="relative min-h-screen bg-white py-16">
+    <div className="relative min-h-screen bg-[#282c34] lg:bg-white py-16">
       <div
         className="absolute inset-x-0 top-0 hidden h-1/2 bg-white lg:block"
         aria-hidden="true"
       />
-      <div className="mx-auto max-w-7xl bg-[#EF3054] lg:bg-transparent lg:px-8">
+      <div className="mx-auto max-w-7xl bg-[#282c34] lg:bg-transparent lg:px-0">
         <div className="lg:grid lg:grid-cols-12">
           <div className="relative z-10 lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:bg-transparent lg:py-16">
             <div
-              className="absolute inset-x-0 h-1/2 bg-white lg:hidden"
+              className="absolute inset-x-0 h-1/2 bg-[#282c34] lg:hidden"
               aria-hidden="true"
             />
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
@@ -27,7 +27,7 @@ export default function TutorialHell() {
             </div>
           </div>
 
-          <div className="relative bg-[#EF3054] lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl">
+          <div className="relative bg-[#282c34] lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl">
             <div
               className="absolute inset-0 hidden overflow-hidden rounded-3xl lg:block"
               aria-hidden="true"
@@ -37,23 +37,23 @@ export default function TutorialHell() {
             <div className="relative mx-auto max-w-md space-y-6 py-12 px-4 sm:max-w-2xl sm:py-16 sm:px-4 lg:col-span-6 lg:col-start-4 lg:max-w-none lg:p-0">
               <div className="m-10 flex flex-col gap-10">
                 <h2
-                  className="text-5xl tracking-tight text-white"
+                  className="text-4xl tracking-tight text-white"
                   id="join-heading"
                 >
                   So, What is a{' '}
                   <span className="font-extrabold">Tutorial Hell?</span>
                 </h2>
-                <blockquote className="flex gap-2 flex-col border-l-4 p-2 rounded-md border-white text-2xl text-white">
+                <blockquote className="flex gap-1 flex-col border-l-4 px-4 rounded-md border-white text-lg text-white">
                   <div>
-                    You <span className="uppercase font-semibold">can't</span>{' '}
-                    learn to code by watching videos
+                    You <span className="uppercase font-bold">can't</span> learn
+                    to code by watching videos
                   </div>
                   <span className="font-bold">Fireship.io</span>
                 </blockquote>
                 <p className="text-2xl text-white">
-                  When we're learning to code by watching videos, we end up{' '}
+                  When learning by watching videos, we end up{' '}
                   <span className="font-extrabold">copy-pasting the code</span>{' '}
-                  from the video into our text editor.
+                  from the video.
                 </p>
                 <p className="text-2xl text-white">
                   This copy-pasting is done by actively{' '}

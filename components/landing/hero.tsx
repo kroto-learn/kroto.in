@@ -84,7 +84,7 @@ export default function Hero() {
         {/* Extra Background */}
         <div
           style={{ width: width }}
-          className="flex bg-[#086788] items-center justify-center min-h-screen absolute"
+          className="flex bg-[#282c34] items-center justify-center min-h-screen absolute"
         ></div>
       </div>
     </>

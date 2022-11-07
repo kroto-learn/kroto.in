@@ -1,4 +1,5 @@
 import Hero from './hero'
+import Solution from './solution'
 import TutorialHell from './tutorial-hell'
 
 export default function Landing() {
@@ -6,6 +7,7 @@ export default function Landing() {
     <div>
       <Hero />
       <TutorialHell />
+      <Solution />
     </div>
   )
 }
