@@ -1,10 +1,21 @@
 import { IoArrowDown, IoArrowForwardOutline } from 'react-icons/io5'
 import Image from 'next/image'
 import logo from '../../public/kroto-logo.png'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
+import { ScrollContext } from '../scroll-observer'
+import Navbar from '../navbar'
 
 export default function Hero() {
   const [width, setWidth] = useState('50%')
+
+  const refContainer = useRef<HTMLDivElement>(null)
+  const { scrollY } = useContext(ScrollContext)
+
+  let progress = 0
+  const { current: elContainer } = refContainer
+  if (elContainer) {
+    progress = Math.min(1, scrollY / elContainer.clientHeight)
+  }
 
   useEffect(() => {
     const handleMouseMove = (e: any) => {
@@ -23,22 +34,29 @@ export default function Hero() {
 
   return (
     <>
-      <div className="relative overflow-hidden min-h-screen">
+      <div
+        ref={refContainer}
+        style={{ transform: `translateY(-${progress * 20}vh)` }}
+        className={`${
+          progress === 0 ? 'relative' : 'sticky -z-50'
+        } top-0  overflow-hidden min-h-screen`}
+      >
         <SVGBackground />
         <div className="flex bg-[#EF3054] flex-col items-center justify-center min-h-screen w-full absolute">
-          <div className="flex-grow-0 z-20 pt-5 transition-opacity ">
+          <Navbar />
+          {/* <div className="flex-grow-0 z-20 pt-5 transition-opacity ">
             <Image src={logo} width={512 / 9} height={512 / 9} alt="logo" />
-          </div>
-          <div className="flex z-20 w-full md:w-8/12 gap-16 flex-1 flex-col items-center justify-center text-center text-white">
+          </div> */}
+          <div className="flex z-20 w-10/12 md:w-9/12 gap-16 flex-1 flex-col items-center justify-center text-center text-white">
             <div className="">
-              <h1 className="text-4xl sm:text-6xl md:text-8xl mb-10">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl mb-10">
                 Are you{' '}
                 <span className="text font font-extrabold opacity-100">
                   struggling
                 </span>{' '}
                 to learn to code
               </h1>
-              <h1 className="text-xl sm:text-2xl md:text-4xl mb-10">
+              <h1 className="text-xl sm:text-2xl mb-10">
                 Crawl out of the{' '}
                 <span className="text font font-extrabold opacity-100">
                   Tutorial Hell
@@ -52,7 +70,7 @@ export default function Hero() {
             <div className="transition-all">
               <a
                 href="#solution-section"
-                className="flex flex-col w-full items-center justify-center text-2xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-4xl transition-all"
+                className="flex flex-col w-full items-center justify-center text-xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-2xl transition-all"
               >
                 <span className="transition-all">Here&apos;s the Solution</span>
                 <span className="transition-all animate-bounce">
@@ -144,5 +162,4 @@ export const SVGBackground = () => (
       />
     </svg>
   </div>
-  //   </div>
 )
