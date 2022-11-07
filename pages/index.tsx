@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Kroto</title>
         <meta property="og:title" content="Kroto - Learn Build Discuss" />
-        <meta property="og:image" content="/public/images/kroto-og.png" />
+        <meta property="og:image" content="../public/kroto-og.png" />
         <meta
           property="og:description"
           content="This is the solution if you're struggling to learn to code by watching videos."
