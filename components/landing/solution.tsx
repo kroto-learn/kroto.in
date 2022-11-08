@@ -36,21 +36,30 @@ const Stats: React.FC = () => {
     >
       <div className="mx-auto text-center sm:text-left flex min-h-screen max-w-7xl flex-col items-start justify-center px-10 py-24 font-thin text-5xl md:py-28 md:text-5xl lg:py-36 lg:text-8xl">
         <div className="flex flex-col gap-10">
-          <span style={{ opacity: opacityForBlock(progress, 0) }}>
+          <span
+            style={{ opacity: opacityForBlock(progress, 0) }}
+            className="transition-opacity"
+          >
             <h1>
               It&apos;s about{' '}
               <span className="uppercase font-semibold">You </span>
               learning and not me teaching
             </h1>
           </span>
-          <span style={{ opacity: opacityForBlock(progress, 1) }}>
+          <span
+            style={{ opacity: opacityForBlock(progress, 1) }}
+            className="transition-opacity"
+          >
             <h1>
               <span className="font-bold">Building </span>
               something interactively, 1-1 with the mentor makes you{' '}
               <span className="font-semibold">really write code</span>
             </h1>
           </span>
-          <span style={{ opacity: opacityForBlock(progress, 2) }}>
+          <span
+            style={{ opacity: opacityForBlock(progress, 2) }}
+            className="transition-opacity"
+          >
             <h1>
               <span className="font-bold">Assignments</span> help you solidify
               the knowledge that you gained and{' '}
@@ -58,7 +67,10 @@ const Stats: React.FC = () => {
               ability
             </h1>
           </span>
-          <span style={{ opacity: opacityForBlock(progress, 3) }}>
+          <span
+            style={{ opacity: opacityForBlock(progress, 3) }}
+            className="transition-opacity"
+          >
             <h1>
               <span className="font-bold">Disucssions</span> in the community
               makes you think in ways that you{' '}
@@ -67,7 +79,10 @@ const Stats: React.FC = () => {
               </span>
             </h1>
           </span>
-          <span style={{ opacity: opacityForBlock(progress, 4) }}>
+          <span
+            style={{ opacity: opacityForBlock(progress, 4) }}
+            className="transition-opacity"
+          >
             <h1 className="text-center gap-10 flex flex-col md:flex-row items-center justify-center w-full text-6xl lg:text-7xl font-bold my-20">
               Learn <IoArrowForward className="rotate-90 sm:rotate-0" /> Build{' '}
               <IoArrowForward className="rotate-90 sm:rotate-0" /> Discuss

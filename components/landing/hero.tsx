@@ -1,8 +1,16 @@
-import { IoArrowDown, IoArrowForwardOutline } from 'react-icons/io5'
+import {
+  IoArrowDown,
+  IoArrowForward,
+  IoArrowForwardOutline,
+} from 'react-icons/io5'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { ScrollContext } from '../scroll-observer'
 
-export default function Hero() {
+interface P {
+  scrollToSolution: () => void
+}
+
+export default function Hero({ scrollToSolution }: P) {
   const [width, setWidth] = useState('50%')
 
   const refContainer = useRef<HTMLDivElement>(null)
@@ -40,11 +48,9 @@ export default function Hero() {
       >
         <SVGBackground />
         <div className="flex bg-[#EF3054] flex-col items-center justify-center min-h-screen w-full absolute">
-          {/* <div className="flex-grow-0 z-20 pt-5 transition-opacity ">
-            <Image src={logo} width={512 / 9} height={512 / 9} alt="logo" />
-          </div> */}
           <div className="flex z-20 w-10/12 md:w-9/12 gap-16 flex-1 flex-col items-center justify-center text-center text-white">
-            <div className="">
+            <div className="grow"></div>
+            <div className="grow">
               <h1 className="text-4xl sm:text-6xl md:text-7xl mb-10">
                 Are you{' '}
                 <span className="text font font-extrabold opacity-100">
@@ -52,23 +58,25 @@ export default function Hero() {
                 </span>{' '}
                 to learn to code
               </h1>
-              <h1 className="text-xl sm:text-2xl mb-10">
+              <h1 className="text-xl sm:text-4xl mb-10">
                 Crawl out of the{' '}
                 <span className="text font font-extrabold opacity-100">
                   Tutorial Hell
                 </span>{' '}
                 and,{' '}
-                <span className="text font font-extrabold opacity-100">
-                  Learn Build Discuss
-                </span>
+                <h1 className="text-center gap-0 md:gap-2 mt-3 flex flex-col md:flex-row items-center justify-center w-full text-2xl lg:text-4xl font-bold">
+                  Learn <IoArrowForward className="rotate-90 md:rotate-0" />{' '}
+                  Build <IoArrowForward className="rotate-90 md:rotate-0" />{' '}
+                  Discuss
+                </h1>
               </h1>
             </div>
-            <div className=" flex-shrink-0 transition-all">
+            <div className="grow-0 mb-5 transition-all">
               <a
-                href="#solution-section"
-                className="flex flex-col w-full items-center justify-center text-xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-2xl transition-all"
+                onClick={() => scrollToSolution()}
+                className="flex flex-col w-full cursor-pointer items-center justify-center text-xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-2xl transition-all"
               >
-                <span className="transition-all">Here&apos;s the Solution</span>
+                <span className="transition-all">Learn How</span>
                 <span className="transition-all animate-bounce">
                   <IoArrowDown />
                 </span>
@@ -88,10 +96,6 @@ export default function Hero() {
 }
 
 export const SVGBackground = () => (
-  //   <div
-  //     className="hidden overflow-hidden sm:absolute sm:inset-y-0 sm:block sm:h-full sm:w-full"
-  //     aria-hidden="true"
-  //   >
   <div className="relative mx-auto h-full z-10 max-w-7xl">
     <svg
       className="absolute right-full translate-y-1/4 translate-x-1/4 transform lg:translate-x-1/2"
