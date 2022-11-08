@@ -20,7 +20,7 @@ export default function TutorialHell() {
               <div className="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
                 <img
                   className="rounded-3xl object-cover object-center shadow-md"
-                  src="https://res.cloudinary.com/practicaldev/image/fetch/s--I0cKpvYv--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://ivumwcqobobsryuftwyv.supabase.co/storage/v1/object/public/posts/d6c8f63f-467f-4de1-863e-6efc3fce4d90/cover_image/ad397583-081d-4332-84d6-96ab71f9ed50.png"
+                  src="https://user-images.githubusercontent.com/69139607/200502628-e73df4ff-7539-4760-b3b2-d7f419604ef7.jpg"
                   alt=""
                 />
               </div>

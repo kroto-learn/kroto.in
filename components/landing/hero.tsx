@@ -1,9 +1,6 @@
 import { IoArrowDown, IoArrowForwardOutline } from 'react-icons/io5'
-import Image from 'next/image'
-import logo from '../../public/kroto-logo.png'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { ScrollContext } from '../scroll-observer'
-import Navbar from '../navbar'
 
 export default function Hero() {
   const [width, setWidth] = useState('50%')
