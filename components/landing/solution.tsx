@@ -12,7 +12,7 @@ const Stats: React.FC = () => {
   const { scrollY } = useContext(ScrollContext)
   const refContainer = useRef<HTMLDivElement>(null)
 
-  const numOfPages = 5
+  const numOfPages = 4
   let progress = 0
 
   const { current: elContainer } = refContainer
@@ -79,7 +79,7 @@ const Stats: React.FC = () => {
               </span>
             </h1>
           </span>
-          <span
+          {/* <span
             style={{ opacity: opacityForBlock(progress, 4) }}
             className="transition-opacity"
           >
@@ -87,7 +87,7 @@ const Stats: React.FC = () => {
               Learn <IoArrowForward className="rotate-90 sm:rotate-0" /> Build{' '}
               <IoArrowForward className="rotate-90 sm:rotate-0" /> Discuss
             </h1>
-          </span>
+          </span> */}
         </div>
       </div>
     </div>

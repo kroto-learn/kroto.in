@@ -75,10 +75,8 @@ export default function Signup() {
                     Tutorial Hell
                   </span>{' '}
                   and,{' '}
-                  <h1 className="text-center gap-0 md:gap-2 mt-3 flex flex-col md:flex-row items-center justify-center w-full text-xl lg:text-2xl font-bold">
-                    Learn <IoArrowForward className="rotate-90 md:rotate-0" />{' '}
-                    Build <IoArrowForward className="rotate-90 md:rotate-0" />{' '}
-                    Discuss
+                  <h1 className="text-center gap-1 md:gap-2 mt-3 flex flex-row items-center justify-center w-full text-lg lg:text-xl font-bold">
+                    Learn <IoArrowForward /> Build <IoArrowForward /> Discuss
                   </h1>
                 </p>
               </div>
@@ -95,7 +93,7 @@ export default function Signup() {
                   />
                 </div>
                 <div className="mt-4 sm:mt-0 sm:ml-3">
-                  <button className="w-full flex gap-1 items-center rounded-md border border-transparent bg-[#Ef3054] px-5 py-3 text-base font-medium text-white shadow hover:scale-105 active:scale-100 hover:brightness-105 sm:px-10 transition-all">
+                  <button className="w-full flex gap-1 justify-center items-center rounded-md border border-transparent bg-[#Ef3054] px-5 py-3 text-base font-medium text-white shadow hover:scale-105 active:scale-100 hover:brightness-105 sm:px-10 transition-all">
                     Sign Up <IoArrowForward />
                   </button>
                 </div>

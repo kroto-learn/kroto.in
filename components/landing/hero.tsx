@@ -40,6 +40,16 @@ export default function Hero({ scrollToSolution }: P) {
   return (
     <>
       <div
+        style={{ left: width }}
+        className="absolute sm:hidden -translate-x-3 z-50 top-2/3"
+      >
+        <img
+          width={25}
+          src="https://global-uploads.webflow.com/625593a881b8ebd169835ca5/6272dd170459e2734bd53502_handlebar.svg"
+          alt=""
+        />
+      </div>
+      <div
         ref={refContainer}
         style={{ transform: `translateY(-${progress * 20}vh)` }}
         className={`${
@@ -47,7 +57,8 @@ export default function Hero({ scrollToSolution }: P) {
         } top-0  overflow-hidden min-h-screen`}
       >
         <SVGBackground />
-        <div className="flex bg-[#EF3054] flex-col items-center justify-center min-h-screen w-full absolute">
+        {/* Scroll Button */}
+        <div className="flex bg-[#282c34] flex-col items-center justify-center min-h-screen w-full absolute">
           <div className="flex z-20 w-10/12 md:w-9/12 gap-16 flex-1 flex-col items-center justify-center text-center text-white">
             <div className="grow"></div>
             <div className="grow">
@@ -64,14 +75,12 @@ export default function Hero({ scrollToSolution }: P) {
                   Tutorial Hell
                 </span>{' '}
                 and,{' '}
-                <h1 className="text-center gap-0 md:gap-2 mt-3 flex flex-col md:flex-row items-center justify-center w-full text-2xl lg:text-4xl font-bold">
-                  Learn <IoArrowForward className="rotate-90 md:rotate-0" />{' '}
-                  Build <IoArrowForward className="rotate-90 md:rotate-0" />{' '}
-                  Discuss
+                <h1 className="text-center gap-1 md:gap-2 mt-3 flex flex-row items-center justify-center w-full text-2xl lg:text-4xl font-bold">
+                  Learn <IoArrowForward /> Build <IoArrowForward /> Discuss
                 </h1>
               </h1>
             </div>
-            <div className="grow-0 mb-5 transition-all">
+            <div className="grow-0 mb-10 md:mb-8 transition-all">
               <a
                 onClick={() => scrollToSolution()}
                 className="flex flex-col w-full cursor-pointer items-center justify-center text-xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-2xl transition-all"
@@ -88,7 +97,7 @@ export default function Hero({ scrollToSolution }: P) {
         {/* Extra Background */}
         <div
           style={{ width: width }}
-          className="flex bg-[#282c34] items-center justify-center min-h-screen absolute"
+          className="flex bg-[#ef3054] items-center justify-center min-h-screen absolute"
         ></div>
       </div>
     </>
