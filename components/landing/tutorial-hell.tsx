@@ -4,12 +4,12 @@ import { SVGBackground } from './hero'
 
 export default function TutorialHell() {
   return (
-    <div className="relative min-h-screen bg-[#282c34] py-16">
+    <div className="relative min-h-screen bg-[#21252C] py-16">
       <div
-        className="absolute inset-x-0 top-0 hidden h-1/2 bg-[#282c34] lg:block"
+        className="absolute inset-x-0 top-0 hidden h-1/2 bg-[#21252C] lg:block"
         aria-hidden="true"
       />
-      <div className="mx-auto max-w-7xl bg-[#282c34] lg:bg-transparent lg:px-0">
+      <div className="mx-auto max-w-7xl bg-[#21252C] lg:bg-transparent lg:px-0">
         <div className="lg:grid lg:grid-cols-12">
           <div className="relative z-10 lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:bg-transparent lg:py-16">
             <div
@@ -20,7 +20,7 @@ export default function TutorialHell() {
               <div className="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
                 <img
                   className="rounded-3xl object-cover object-center shadow-md"
-                  src="https://res.cloudinary.com/practicaldev/image/fetch/s--I0cKpvYv--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://ivumwcqobobsryuftwyv.supabase.co/storage/v1/object/public/posts/d6c8f63f-467f-4de1-863e-6efc3fce4d90/cover_image/ad397583-081d-4332-84d6-96ab71f9ed50.png"
+                  src="https://user-images.githubusercontent.com/69139607/200502628-e73df4ff-7539-4760-b3b2-d7f419604ef7.jpg"
                   alt=""
                 />
               </div>

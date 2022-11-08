@@ -1,9 +1,6 @@
 import { IoArrowDown, IoArrowForwardOutline } from 'react-icons/io5'
-import Image from 'next/image'
-import logo from '../../public/kroto-logo.png'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { ScrollContext } from '../scroll-observer'
-import Navbar from '../navbar'
 
 export default function Hero() {
   const [width, setWidth] = useState('50%')
@@ -43,7 +40,6 @@ export default function Hero() {
       >
         <SVGBackground />
         <div className="flex bg-[#EF3054] flex-col items-center justify-center min-h-screen w-full absolute">
-          <Navbar />
           {/* <div className="flex-grow-0 z-20 pt-5 transition-opacity ">
             <Image src={logo} width={512 / 9} height={512 / 9} alt="logo" />
           </div> */}
@@ -67,7 +63,7 @@ export default function Hero() {
                 </span>
               </h1>
             </div>
-            <div className="transition-all">
+            <div className=" flex-shrink-0 transition-all">
               <a
                 href="#solution-section"
                 className="flex flex-col w-full items-center justify-center text-xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-2xl transition-all"
