@@ -32,10 +32,14 @@ export default function Hero({ scrollToSolution }: P) {
       handleMouseMove(e.touches[0])
     )
 
+    if (progress > 0.5) {
+      document.removeEventListener('mousemove', handleMouseMove)
+    }
+
     return () => {
       document.removeEventListener('mousemove', handleMouseMove)
     }
-  }, [])
+  }, [progress])
 
   return (
     <>
