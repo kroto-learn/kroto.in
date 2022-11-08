@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import Hero from './hero'
+import OurTeam from './our-team'
 import Signup from './signup'
 import Solution from './solution'
 import TutorialHell from './tutorial-hell'
@@ -15,10 +16,11 @@ export default function Landing() {
   return (
     <div>
       <Hero scrollToSolution={scrollToSolution} />
-      <TutorialHell scrollToSolution={scrollToSolution} />
+      {/* <TutorialHell scrollToSolution={scrollToSolution} /> */}
       <div ref={solutionRef}>
         <Solution />
       </div>
+      <OurTeam />
       <div id="sign-up" ref={signupRef}>
         <Signup />
       </div>

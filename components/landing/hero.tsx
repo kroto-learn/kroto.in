@@ -64,14 +64,12 @@ export default function Hero({ scrollToSolution }: P) {
                   Tutorial Hell
                 </span>{' '}
                 and,{' '}
-                <h1 className="text-center gap-0 md:gap-2 mt-3 flex flex-col md:flex-row items-center justify-center w-full text-2xl lg:text-4xl font-bold">
-                  Learn <IoArrowForward className="rotate-90 md:rotate-0" />{' '}
-                  Build <IoArrowForward className="rotate-90 md:rotate-0" />{' '}
-                  Discuss
+                <h1 className="text-center gap-1 md:gap-2 mt-3 flex flex-row items-center justify-center w-full text-2xl lg:text-4xl font-bold">
+                  Learn <IoArrowForward /> Build <IoArrowForward /> Discuss
                 </h1>
               </h1>
             </div>
-            <div className="grow-0 mb-5 transition-all">
+            <div className="grow-0 mb-10 md:mb-8 transition-all">
               <a
                 onClick={() => scrollToSolution()}
                 className="flex flex-col w-full cursor-pointer items-center justify-center text-xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-2xl transition-all"
