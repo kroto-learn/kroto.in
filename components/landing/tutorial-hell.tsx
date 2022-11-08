@@ -4,12 +4,12 @@ import { SVGBackground } from './hero'
 
 export default function TutorialHell() {
   return (
-    <div className="relative min-h-screen bg-[#282c34] py-16">
+    <div className="relative min-h-screen bg-[#21252C] py-16">
       <div
-        className="absolute inset-x-0 top-0 hidden h-1/2 bg-[#282c34] lg:block"
+        className="absolute inset-x-0 top-0 hidden h-1/2 bg-[#21252C] lg:block"
         aria-hidden="true"
       />
-      <div className="mx-auto max-w-7xl bg-[#282c34] lg:bg-transparent lg:px-0">
+      <div className="mx-auto max-w-7xl bg-[#21252C] lg:bg-transparent lg:px-0">
         <div className="lg:grid lg:grid-cols-12">
           <div className="relative z-10 lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:bg-transparent lg:py-16">
             <div
