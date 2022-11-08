@@ -38,7 +38,8 @@ const Stats: React.FC = () => {
         <div className="flex flex-col gap-10">
           <span style={{ opacity: opacityForBlock(progress, 0) }}>
             <h1>
-              It's about <span className="uppercase font-semibold">You </span>
+              It&apos;s about{' '}
+              <span className="uppercase font-semibold">You </span>
               learning and not me teaching
             </h1>
           </span>
@@ -61,7 +62,9 @@ const Stats: React.FC = () => {
             <h1>
               <span className="font-bold">Disucssions</span> in the community
               makes you think in ways that you{' '}
-              <span className="font-semibold">haven't imagined before</span>
+              <span className="font-semibold">
+                haven&apos;t imagined before
+              </span>
             </h1>
           </span>
           <span style={{ opacity: opacityForBlock(progress, 4) }}>
