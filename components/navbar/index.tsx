@@ -1,10 +1,11 @@
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Fragment } from 'react'
+import { Fragment, useContext } from 'react'
 import Image from 'next/image'
 import logo from '../../public/kroto-logo.png'
 import { SiBookstack, SiGoogleclassroom } from 'react-icons/si'
 import { AiOutlineQuestion } from 'react-icons/ai'
+import { ScrollContext } from '../scroll-observer'
 
 const solutions = [
   {
@@ -40,8 +41,16 @@ export function KrotoLogo() {
 }
 
 export default function Navbar() {
+  const { scrollY } = useContext(ScrollContext)
+
   return (
-    <div className="fixed top-5 left-2 right-2 sm:left-5 sm:right-5 md:left-10 md:right-10 z-50 p-2 bg-[#21252C]/50 rounded-lg backdrop-blur-lg">
+    <div
+      className={`fixed ${
+        scrollY < 200
+          ? 'top-0 right-0 left-0 my-2 mx-2 md:mx-10'
+          : 'top-5 left-2 bg-[#21252C]/50 backdrop-blur-lg   rounded-lg right-2 sm:left-5 sm:right-5 md:left-10 md:right-10'
+      }  z-50 p-2 transition-all`}
+    >
       {/* Left Side */}
       <div className="flex flex-col sm:flex-row sm:justify-between">
         <div className="flex justify-between sm:justify-start items-center">
