@@ -93,7 +93,7 @@ export default function Signup() {
                   />
                 </div>
                 <div className="mt-4 sm:mt-0 sm:ml-3">
-                  <button className="w-full flex gap-1 items-center rounded-md border border-transparent bg-[#Ef3054] px-5 py-3 text-base font-medium text-white shadow hover:scale-105 active:scale-100 hover:brightness-105 sm:px-10 transition-all">
+                  <button className="w-full flex gap-1 justify-center items-center rounded-md border border-transparent bg-[#Ef3054] px-5 py-3 text-base font-medium text-white shadow hover:scale-105 active:scale-100 hover:brightness-105 sm:px-10 transition-all">
                     Sign Up <IoArrowForward />
                   </button>
                 </div>

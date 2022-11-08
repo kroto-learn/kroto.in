@@ -6,6 +6,7 @@ import logo from '../../public/kroto-logo.png'
 import { SiBookstack, SiGoogleclassroom } from 'react-icons/si'
 import { AiOutlineQuestion } from 'react-icons/ai'
 import { ScrollContext } from '../scroll-observer'
+import { IoArrowForward } from 'react-icons/io5'
 
 const solutions = [
   {
@@ -63,8 +64,8 @@ export default function Navbar() {
         </div>
         <div className="hidden sm:block order-last">
           <a href="#sign-up">
-            <button className="group inline-flex items-center rounded-md brightness-110 bg-[#EF3054] backdrop-blur-sm shadow px-3 py-2 text-base text-white font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
-              Signup Now
+            <button className="group inline-flex gap-1 items-center rounded-md brightness-110 bg-[#EF3054] backdrop-blur-sm shadow px-8 py-2 text-base text-white font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
+              Signup Now <IoArrowForward />
             </button>
           </a>
         </div>

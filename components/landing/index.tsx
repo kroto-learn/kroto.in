@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import Courses from './courses'
 import Hero from './hero'
 import OurTeam from './our-team'
 import Signup from './signup'
@@ -20,6 +21,7 @@ export default function Landing() {
       <div ref={solutionRef}>
         <Solution />
       </div>
+      <Courses />
       <OurTeam />
       <div id="sign-up" ref={signupRef}>
         <Signup />
