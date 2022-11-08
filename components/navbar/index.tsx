@@ -1,10 +1,11 @@
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Fragment } from 'react'
+import { Fragment, useContext } from 'react'
 import Image from 'next/image'
 import logo from '../../public/kroto-logo.png'
 import { SiBookstack, SiGoogleclassroom } from 'react-icons/si'
 import { AiOutlineQuestion } from 'react-icons/ai'
+import { ScrollContext } from '../scroll-observer'
 
 const solutions = [
   {
@@ -40,8 +41,16 @@ export function KrotoLogo() {
 }
 
 export default function Navbar() {
+  const { scrollY } = useContext(ScrollContext)
+
   return (
-    <div className="fixed top-5 left-2 right-2 sm:left-5 sm:right-5 md:left-10 md:right-10 z-50 p-2 bg-[#21252C]/50 rounded-lg backdrop-blur-lg">
+    <div
+      className={`fixed ${
+        scrollY < 200
+          ? 'top-0 right-0 left-0 my-2 mx-2 md:mx-10'
+          : 'top-5 left-2 bg-[#21252C]/50 backdrop-blur-lg   rounded-lg right-2 sm:left-5 sm:right-5 md:left-10 md:right-10'
+      }  z-50 p-2 transition-all`}
+    >
       {/* Left Side */}
       <div className="flex flex-col sm:flex-row sm:justify-between">
         <div className="flex justify-between sm:justify-start items-center">
@@ -54,7 +63,7 @@ export default function Navbar() {
         </div>
         <div className="hidden sm:block order-last">
           <a href="#sign-up">
-            <button className="group inline-flex items-center rounded-md bg-[#282c34]/50 backdrop-blur-sm  px-3 py-2 text-base text-white hover:scale-105 active:scale-100 font-bold hover:text-opacity-100 transition-all">
+            <button className="group inline-flex items-center rounded-md brightness-110 bg-[#EF3054] backdrop-blur-sm shadow px-3 py-2 text-base text-white font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
               Signup Now
             </button>
           </a>
@@ -66,14 +75,14 @@ export default function Navbar() {
 
 export function Menu() {
   return (
-    <div className="z-40 top-16 w-full max-w-sm">
+    <div className="z-40 shadow top-16 w-full max-w-sm">
       <Popover className="relative">
         {({ open }) => (
           <>
             <Popover.Button
               className={`
                 ${open ? '' : 'text-opacity-90'}
-                group inline-flex hover:scale-105 active:scale-100 items-center rounded-md bg-[#282c34]/50 backdrop-blur-sm  px-3 py-2 text-base font-medium text-white text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+                group shadow inline-flex hover:scale-105 active:scale-100 items-center rounded-md bg-[#282c34]/50 backdrop-blur-sm  px-3 py-2 text-base font-medium text-white text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
             >
               <span>Menu</span>
               <ChevronDownIcon
@@ -100,7 +109,7 @@ export function Menu() {
                         href={item.href}
                         className="-mx-3 -my-2 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-[#282c34] focus:outline-none focus-visible:ring focus-visible:ring-[#EF3054] focus-visible:ring-opacity-50"
                       >
-                        <div className="flex rounded-md h-10 w-10 bg-[#282c34] shrink-0 items-center justify-center text-white">
+                        <div className="flex rounded-md h-10 w-10 bg-dark-accent shrink-0 items-center justify-center text-white">
                           <item.icon aria-hidden="true" />
                         </div>
                         <div className="ml-4">
@@ -113,7 +122,7 @@ export function Menu() {
                   </div>
                   <div className="bg-[#21252C] p-2">
                     <a
-                      href="##"
+                      href="#sign-up"
                       className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-[#282c34] focus:outline-none focus-visible:ring focus-visible:ring-[#EF3054] focus-visible:ring-opacity-50"
                     >
                       <span className="flex items-center">

@@ -2,7 +2,11 @@ import Link from 'next/link'
 import { IoArrowForward } from 'react-icons/io5'
 import { SVGBackground } from './hero'
 
-export default function TutorialHell() {
+interface P {
+  scrollToSolution: () => void
+}
+
+export default function TutorialHell({ scrollToSolution }: P) {
   return (
     <div className="relative min-h-screen bg-[#21252C] py-16">
       <div
@@ -63,8 +67,8 @@ export default function TutorialHell() {
                   </span>
                 </p>
                 <a
-                  className="flex flex-row max-w-xs -mx-10 z-40 items-center justify-center text-xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:text-2xl transition-all"
-                  href="#solution-section"
+                  className="flex cursor-pointer flex-row max-w-xs -mx-10 z-40 items-center justify-center text-xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:text-2xl transition-all"
+                  onClick={() => scrollToSolution()}
                 >
                   Here&apos;s the Solution
                   <span>
