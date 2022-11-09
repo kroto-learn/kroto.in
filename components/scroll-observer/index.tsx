@@ -16,7 +16,6 @@ const ScrollObserver: React.FC<P> = ({ children }) => {
   const [scrollY, setScrollY] = useState(0)
 
   const handleScroll = useCallback(() => {
-    console.log(scrollY)
     setScrollY(window.scrollY)
   }, [])
 
