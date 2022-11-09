@@ -12,8 +12,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Kroto - Learn Build Discuss" />
         <meta property="og:url" content="https://www.kroto.in" />
-        <meta property="og:image" content="https://kroto.in/kroto-og.png" />
-        <meta property="og:image:url" content="https://kroto.in/kroto-og.png" />
+        <meta property="og:image" content="https://www.kroto.in/kroto-og.png" />
+        <meta
+          property="og:image:url"
+          content="https://www.kroto.in/kroto-og.png"
+        />
         <meta property="og:image:width" content="630" />
         <meta property="og:image:height" content="1200" />
         <meta
