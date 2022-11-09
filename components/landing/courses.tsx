@@ -198,7 +198,7 @@ export default function Courses() {
             <img
               className="relative mx-auto"
               width={490}
-              src="https://user-images.githubusercontent.com/69139607/200602616-497f3ec1-b8d5-416e-b39d-fbe104c026bb.png"
+              src="https://user-images.githubusercontent.com/69139607/200847803-126df1c8-ce9f-4808-938a-c89caebf1e1d.png"
               alt=""
             />
           </div>
@@ -279,7 +279,7 @@ export default function Courses() {
               <svg
                 className="absolute left-1/2 -translate-x-1/2 translate-y-16 transform lg:hidden"
                 width={784}
-                height={300}
+                height={400}
                 fill="none"
                 viewBox="0 0 784 404"
                 aria-hidden="true"
@@ -305,14 +305,14 @@ export default function Courses() {
                 </defs>
                 <rect
                   width={784}
-                  height={300}
+                  height={400}
                   fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
                 />
               </svg>
               <img
                 className="relative mx-auto"
                 width={490}
-                src="https://tailwindui.com/img/features/feature-example-2.png"
+                src="https://user-images.githubusercontent.com/69139607/200853337-9e284982-7395-4305-adb8-3dec1b220d51.png"
                 alt=""
               />
             </div>
@@ -421,7 +421,7 @@ export default function Courses() {
             <img
               className="relative mx-auto"
               width={490}
-              src="https://tailwindui.com/img/features/feature-example-1.png"
+              src="https://user-images.githubusercontent.com/69139607/200854685-cc40f13b-23ae-46ec-a2b8-8ee503039293.png"
               alt=""
             />
           </div>
