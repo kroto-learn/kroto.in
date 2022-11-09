@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="https://kroto.in/kroto-og.png" />
         <meta
           property="og:description"
-          content="This is the solution if you're struggling to learn to code by watching videos."
+          content="Struggling to learn to code? This is the solution."
         />
       </Head>
       <ScrollObserver>
