@@ -43,7 +43,9 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <ScrollObserver>
         <Navbar />
-        <Component {...pageProps} />
+        <div className="mt-20">
+          <Component {...pageProps} />
+        </div>
       </ScrollObserver>
     </>
   )

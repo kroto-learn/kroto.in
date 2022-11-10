@@ -7,6 +7,8 @@ import { SiBookstack, SiGoogleclassroom } from 'react-icons/si'
 import { AiOutlineQuestion } from 'react-icons/ai'
 import { ScrollContext } from '../scroll-observer'
 import { IoArrowForward } from 'react-icons/io5'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const solutions = [
   {
@@ -32,22 +34,25 @@ const solutions = [
 
 export function KrotoLogo() {
   return (
-    <div className="flex">
-      <div>
-        <Image src={logo} width={512 / 13} height={512 / 13} alt="logo" />
+    <Link href="/">
+      <div className="flex">
+        <div>
+          <Image src={logo} width={512 / 13} height={512 / 13} alt="logo" />
+        </div>
+        <h2 className="text-3xl text-white font-bold -translate-x-1">roto</h2>
       </div>
-      <h2 className="text-3xl text-white font-bold -translate-x-1">roto</h2>
-    </div>
+    </Link>
   )
 }
 
 export default function Navbar() {
   const { scrollY } = useContext(ScrollContext)
+  const router = useRouter()
 
   return (
     <div
       className={`fixed ${
-        scrollY < 200
+        scrollY < 200 && router.asPath === '/'
           ? 'top-0 right-0 left-0 my-2 mx-2 md:mx-10'
           : 'top-5 left-2 bg-[#21252C]/50 backdrop-blur-lg   rounded-lg right-2 sm:left-5 sm:right-5 md:left-10 md:right-10'
       }  z-50 p-2 transition-all`}
