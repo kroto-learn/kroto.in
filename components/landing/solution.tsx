@@ -8,24 +8,30 @@ const opacityForBlock = (sectionProgress: number, blockNo: number) => {
   return 0.2
 }
 
+const NUM_OF_PAGES = 5
+
 const Stats: React.FC = () => {
   const { scrollY } = useContext(ScrollContext)
   const refContainer = useRef<HTMLDivElement>(null)
 
-  const numOfPages = 4
   let progress = 0
 
   const { current: elContainer } = refContainer
+
   if (elContainer) {
     const { clientHeight, offsetTop } = elContainer
     const screenH = window.innerHeight
     const halfH = screenH / 2
+
     const percentY =
       Math.min(
         clientHeight + halfH,
         Math.max(-screenH, scrollY - offsetTop) + halfH
       ) / clientHeight
-    progress = Math.min(numOfPages - 0.5, Math.max(0.5, percentY * numOfPages))
+    progress = Math.min(
+      NUM_OF_PAGES - 0.5,
+      Math.max(0.5, percentY * NUM_OF_PAGES)
+    )
   }
 
   return (
@@ -69,6 +75,17 @@ const Stats: React.FC = () => {
           </span>
           <span
             style={{ opacity: opacityForBlock(progress, 3) }}
+            className="transition-opacity"
+          >
+            <h1>
+              <span className="font-bold">Having Problems</span> when building?
+              our <span className="font-semibold">doubt clearing team</span>{' '}
+              will clear your doubts on a{' '}
+              <span className="font-semibold">1-1 video call</span> if needed.
+            </h1>
+          </span>
+          <span
+            style={{ opacity: opacityForBlock(progress, 4) }}
             className="transition-opacity"
           >
             <h1>

@@ -7,7 +7,6 @@ import { SiBookstack, SiGoogleclassroom } from 'react-icons/si'
 import { AiOutlineQuestion } from 'react-icons/ai'
 import { ScrollContext } from '../scroll-observer'
 import { IoArrowForward } from 'react-icons/io5'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 const solutions = [
@@ -21,43 +20,28 @@ const solutions = [
   {
     name: 'Courses',
     description: 'Create your own targeted content',
-    href: '##',
+    href: '#courses',
     icon: SiBookstack,
   },
   {
     name: 'About Us',
     description: 'Keep track of your growth',
-    href: '##',
+    href: '#our-team',
     icon: AiOutlineQuestion,
   },
 ]
 
-export function KrotoLogo() {
-  return (
-    <Link href="/">
-      <div className="flex">
-        <div>
-          <Image src={logo} width={512 / 13} height={512 / 13} alt="logo" />
-        </div>
-        <h2 className="text-3xl text-white font-bold -translate-x-1">roto</h2>
-      </div>
-    </Link>
-  )
-}
-
-export default function Navbar() {
+export default function Navbar({ path }: { path: string }) {
   const { scrollY } = useContext(ScrollContext)
-  const router = useRouter()
 
   return (
     <div
       className={`fixed ${
-        scrollY < 200 && router.asPath === '/'
-          ? 'top-0 right-0 left-0 my-2 mx-2 md:mx-10'
-          : 'top-5 left-2 bg-[#21252C]/50 backdrop-blur-lg   rounded-lg right-2 sm:left-5 sm:right-5 md:left-10 md:right-10'
-      }  z-50 p-2 transition-all`}
+        scrollY < 200 && path === '/'
+          ? 'top-0 right-0 left-0 my-2 '
+          : 'top-2 md:top-5 left-2 bg-[#282c34]/50 backdrop-blur-lg rounded-lg right-2 sm:left-5 sm:right-5 md:left-10 md:right-10'
+      }  z-50 p-2 max-w-full md:max-w-[80%] mx-auto transition-all`}
     >
-      {/* Left Side */}
       <div className="flex flex-col sm:flex-row sm:justify-between">
         <div className="flex justify-between sm:justify-start items-center">
           <div className="">
@@ -69,13 +53,26 @@ export default function Navbar() {
         </div>
         <div className="hidden sm:block order-last">
           <a href="#sign-up">
-            <button className="group inline-flex gap-1 items-center rounded-md brightness-110 bg-[#EF3054] backdrop-blur-sm shadow px-8 py-2 text-base text-white font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
+            <button className="group inline-flex gap-1 items-center rounded-md brightness-110 bg-[#EF3054] backdrop-blur-sm shadow px-5 py-2 text-base text-white font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
               Signup Now <IoArrowForward />
             </button>
           </a>
         </div>
       </div>
     </div>
+  )
+}
+
+export function KrotoLogo() {
+  return (
+    <Link href="/">
+      <div className="flex">
+        <div>
+          <Image src={logo} width={512 / 13} height={512 / 13} alt="logo" />
+        </div>
+        <h2 className="text-3xl text-white font-bold -translate-x-1">roto</h2>
+      </div>
+    </Link>
   )
 }
 

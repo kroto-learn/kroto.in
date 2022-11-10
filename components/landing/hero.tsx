@@ -28,9 +28,9 @@ export default function Hero({ scrollToSolution }: P) {
       setWidth(width)
     }
     document.addEventListener('mousemove', handleMouseMove)
-    document.addEventListener('touchmove', (e: any) =>
-      handleMouseMove(e.touches[0])
-    )
+    // document.addEventListener('touchmove', (e: any) =>
+    //   handleMouseMove(e.touches[0])
+    // )
 
     if (progress > 0.5) {
       document.removeEventListener('mousemove', handleMouseMove)
@@ -38,12 +38,15 @@ export default function Hero({ scrollToSolution }: P) {
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove)
+      // document.removeEventListener('touchmove', (e: any) =>
+      //   handleMouseMove(e.touches[0])
+      // )
     }
   }, [progress])
 
   return (
     <>
-      <div
+      {/* <div
         style={{ left: width }}
         className="absolute sm:hidden -translate-x-3 z-50 top-2/3"
       >
@@ -52,7 +55,7 @@ export default function Hero({ scrollToSolution }: P) {
           src="https://global-uploads.webflow.com/625593a881b8ebd169835ca5/6272dd170459e2734bd53502_handlebar.svg"
           alt=""
         />
-      </div>
+      </div> */}
       <div
         ref={refContainer}
         style={{ transform: `translateY(-${progress * 20}vh)` }}
