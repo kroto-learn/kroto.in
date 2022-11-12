@@ -27,13 +27,12 @@ export default function Hero({ scrollToSolution }: P) {
       const width = `${(e.clientX / window.innerWidth) * 100}%`
       setWidth(width)
     }
-    document.addEventListener('mousemove', handleMouseMove)
-    document.addEventListener('touchmove', (e: any) =>
-      handleMouseMove(e.touches[0])
-    )
 
-    if (progress > 0.5) {
-      document.removeEventListener('mousemove', handleMouseMove)
+    if (progress < 0.1) {
+      document.addEventListener('mousemove', handleMouseMove)
+      document.addEventListener('touchmove', (e: any) =>
+        handleMouseMove(e.touches[0])
+      )
     }
 
     return () => {
@@ -47,24 +46,23 @@ export default function Hero({ scrollToSolution }: P) {
   return (
     <>
       <div
-        style={{ left: width }}
-        className="absolute sm:hidden -translate-x-3 z-30 top-2/3"
-      >
-        <img
-          width={25}
-          src="https://global-uploads.webflow.com/625593a881b8ebd169835ca5/6272dd170459e2734bd53502_handlebar.svg"
-          alt=""
-        />
-      </div>
-      <div
         ref={refContainer}
         style={{ transform: `translateY(-${progress * 20}vh)` }}
         className={`${
           progress === 0 ? 'relative' : 'sticky -z-50'
         } top-0  overflow-hidden min-h-screen`}
       >
+        <div
+          style={{ left: width, transition: 'width 0.1s ease' }}
+          className="absolute h-full sm:hidden -translate-x-3 z-30 top-2/3"
+        >
+          <img
+            width={25}
+            src="https://global-uploads.webflow.com/625593a881b8ebd169835ca5/6272dd170459e2734bd53502_handlebar.svg"
+            alt=""
+          />
+        </div>
         <SVGBackground />
-        {/* Scroll Button */}
         <div className="flex bg-[#282c34] flex-col items-center justify-center min-h-screen w-full absolute">
           <div className="flex z-20 w-10/12 md:w-9/12 gap-16 flex-1 flex-col items-center justify-center text-center text-white">
             <div className="grow"></div>
@@ -104,7 +102,7 @@ export default function Hero({ scrollToSolution }: P) {
         {/* Extra Background */}
         <div
           style={{ width: width, transition: 'width 0.1s ease' }}
-          className="flex bg-[#ef3054] items-center justify-center min-h-screen absolute"
+          className="bg-[#ef3054] h-full absolute"
         ></div>
       </div>
     </>
