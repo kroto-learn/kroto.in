@@ -18,11 +18,19 @@ export default function Landing() {
     <div>
       <Hero scrollToSolution={scrollToSolution} />
       {/* <TutorialHell scrollToSolution={scrollToSolution} /> */}
+
       <div ref={solutionRef}>
         <Solution />
       </div>
-      <Courses />
-      <OurTeam />
+
+      <div id="courses">
+        <Courses />
+      </div>
+
+      <div id="our-team">
+        <OurTeam />
+      </div>
+
       <div id="sign-up" ref={signupRef}>
         <Signup />
       </div>

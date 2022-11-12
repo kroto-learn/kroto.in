@@ -1,4 +1,3 @@
-import { BoltIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline'
 import {
   IoArrowForward,
   IoLogoCss3,
@@ -9,6 +8,7 @@ import {
 import { TbBrandNextjs } from 'react-icons/tb'
 import { GiCheckboxTree, GiWireframeGlobe } from 'react-icons/gi'
 import { AiOutlineFileSync } from 'react-icons/ai'
+import Link from 'next/link'
 
 const reactFeatures = [
   {
@@ -154,11 +154,18 @@ export default function Courses() {
                 </div>
               ))}
 
-              <a href="#sign-up">
-                <button className="group w-full sm:max-w-sm inline-flex gap-1 my-10 justify-center items-center rounded-md brightness-110 bg-[#EF3054] backdrop-blur-sm shadow px-8 py-2 text-xl text-white font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
-                  Signup Now <IoArrowForward />
-                </button>
-              </a>
+              <div className="flex w-full items-center">
+                <a href="#sign-up">
+                  <button className="group text-sm inline-flex gap-1justify-center items-center rounded-md bg-[#EF3054] backdrop-blur-sm shadow px-8 py-2 sm:text-xl text-white font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
+                    Signup Now <IoArrowForward />
+                  </button>
+                </a>
+                <Link href="/courses/react-and-beyond">
+                  <button className="group text-sm underline underline-offset-4 inline-flex gap-1 justify-center items-center rounded-md text-[#EF3054] px-8 py-2 sm:text-2xl font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
+                    Learn More
+                  </button>
+                </Link>
+              </div>
             </dl>
           </div>
 
@@ -267,11 +274,18 @@ export default function Courses() {
                   </div>
                 ))}
 
-                <a href="#sign-up">
-                  <button className="group w-full sm:max-w-sm inline-flex gap-1 my-10 justify-center items-center rounded-md brightness-110 bg-[#EF3054] backdrop-blur-sm shadow px-8 py-2 text-xl text-white font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
-                    Signup Now <IoArrowForward />
-                  </button>
-                </a>
+                <div className="flex w-full items-center">
+                  <a href="#sign-up">
+                    <button className="group text-sm inline-flex gap-1justify-center items-center rounded-md bg-[#EF3054] backdrop-blur-sm shadow px-8 py-2 sm:text-xl text-white font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
+                      Signup Now <IoArrowForward />
+                    </button>
+                  </a>
+                  <Link href="/courses/async-js-dom">
+                    <button className="group text-sm underline underline-offset-4 inline-flex gap-1 justify-center items-center rounded-md text-[#EF3054] px-8 py-2 sm:text-2xl font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
+                      Learn More
+                    </button>
+                  </Link>
+                </div>
               </dl>
             </div>
 
@@ -377,11 +391,18 @@ export default function Courses() {
                 </div>
               ))}
 
-              <a href="#sign-up">
-                <button className="group w-full sm:max-w-sm inline-flex gap-1 my-10 justify-center items-center rounded-md brightness-110 bg-[#EF3054] backdrop-blur-sm shadow px-8 py-2 text-xl text-white font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
-                  Signup Now <IoArrowForward />
-                </button>
-              </a>
+              <div className="flex w-full items-center">
+                <a href="#sign-up">
+                  <button className="group text-sm inline-flex gap-1justify-center items-center rounded-md bg-[#EF3054] backdrop-blur-sm shadow px-8 py-2 sm:text-xl text-white font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
+                    Signup Now <IoArrowForward />
+                  </button>
+                </a>
+                <Link href="/courses/intro-web-dev">
+                  <button className="group text-sm underline underline-offset-4 inline-flex gap-1 justify-center items-center rounded-md text-[#EF3054] px-8 py-2 sm:text-2xl font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
+                    Learn More
+                  </button>
+                </Link>
+              </div>
             </dl>
           </div>
 

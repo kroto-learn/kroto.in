@@ -8,6 +8,8 @@
   html {
     font-family: Nunito;
     scroll-behavior: smooth;
+    background-color: #21252C;
+    color: white;
   }
 }
 
