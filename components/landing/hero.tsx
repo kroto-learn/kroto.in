@@ -28,9 +28,9 @@ export default function Hero({ scrollToSolution }: P) {
       setWidth(width)
     }
     document.addEventListener('mousemove', handleMouseMove)
-    // document.addEventListener('touchmove', (e: any) =>
-    //   handleMouseMove(e.touches[0])
-    // )
+    document.addEventListener('touchmove', (e: any) =>
+      handleMouseMove(e.touches[0])
+    )
 
     if (progress > 0.5) {
       document.removeEventListener('mousemove', handleMouseMove)
@@ -38,24 +38,24 @@ export default function Hero({ scrollToSolution }: P) {
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove)
-      // document.removeEventListener('touchmove', (e: any) =>
-      //   handleMouseMove(e.touches[0])
-      // )
+      document.removeEventListener('touchmove', (e: any) =>
+        handleMouseMove(e.touches[0])
+      )
     }
   }, [progress])
 
   return (
     <>
-      {/* <div
+      <div
         style={{ left: width }}
-        className="absolute sm:hidden -translate-x-3 z-50 top-2/3"
+        className="absolute sm:hidden -translate-x-3 z-30 top-2/3"
       >
         <img
           width={25}
           src="https://global-uploads.webflow.com/625593a881b8ebd169835ca5/6272dd170459e2734bd53502_handlebar.svg"
           alt=""
         />
-      </div> */}
+      </div>
       <div
         ref={refContainer}
         style={{ transform: `translateY(-${progress * 20}vh)` }}
@@ -103,7 +103,7 @@ export default function Hero({ scrollToSolution }: P) {
 
         {/* Extra Background */}
         <div
-          style={{ width: width }}
+          style={{ width: width, transition: 'width 0.1s ease' }}
           className="flex bg-[#ef3054] items-center justify-center min-h-screen absolute"
         ></div>
       </div>
