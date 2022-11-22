@@ -8,7 +8,6 @@ import {
 import { TbBrandNextjs } from 'react-icons/tb'
 import { GiCheckboxTree, GiWireframeGlobe } from 'react-icons/gi'
 import { AiOutlineFileSync } from 'react-icons/ai'
-import Link from 'next/link'
 
 const reactFeatures = [
   {
@@ -160,11 +159,11 @@ export default function Courses() {
                     Signup Now <IoArrowForward />
                   </button>
                 </a>
-                <Link href="/courses/react-and-beyond">
+                {/* <Link href="/courses/react-and-beyond">
                   <button className="group text-sm underline underline-offset-4 inline-flex gap-1 justify-center items-center rounded-md text-[#EF3054] px-8 py-2 sm:text-2xl font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
                     Learn More
                   </button>
-                </Link>
+                </Link> */}
               </div>
             </dl>
           </div>
@@ -280,11 +279,11 @@ export default function Courses() {
                       Signup Now <IoArrowForward />
                     </button>
                   </a>
-                  <Link href="/courses/async-js-dom">
+                  {/* <Link href="/courses/async-js-dom">
                     <button className="group text-sm underline underline-offset-4 inline-flex gap-1 justify-center items-center rounded-md text-[#EF3054] px-8 py-2 sm:text-2xl font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
                       Learn More
                     </button>
-                  </Link>
+                  </Link> */}
                 </div>
               </dl>
             </div>
@@ -397,11 +396,11 @@ export default function Courses() {
                     Signup Now <IoArrowForward />
                   </button>
                 </a>
-                <Link href="/courses/intro-web-dev">
+                {/* <Link href="/courses/intro-web-dev">
                   <button className="group text-sm underline underline-offset-4 inline-flex gap-1 justify-center items-center rounded-md text-[#EF3054] px-8 py-2 sm:text-2xl font-medium hover:scale-105 active:scale-100 hover:text-opacity-100 transition-all">
                     Learn More
                   </button>
-                </Link>
+                </Link> */}
               </div>
             </dl>
           </div>

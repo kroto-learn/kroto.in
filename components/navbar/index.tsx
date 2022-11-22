@@ -14,7 +14,7 @@ const solutions = [
     name: 'Go to Classroom',
     description:
       'From basics of React to building production apps with Next.js using TypeScript',
-    href: '##',
+    href: '#',
     icon: SiGoogleclassroom,
   },
   {

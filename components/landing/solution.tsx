@@ -78,10 +78,12 @@ const Stats: React.FC = () => {
             className="transition-opacity"
           >
             <h1>
-              <span className="font-bold">Having Problems</span> when building?
-              our <span className="font-semibold">doubt clearing team</span>{' '}
-              will clear your doubts on a{' '}
-              <span className="font-semibold">1-1 video call</span> if needed.
+              <span className="font-bold">Having Problems? </span>
+              get your doubts cleared <span className="font-semibold">
+                1-1
+              </span>{' '}
+              with our{' '}
+              <span className="font-semibold">doubt clearing team</span>
             </h1>
           </span>
           <span

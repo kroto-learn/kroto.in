@@ -3,6 +3,7 @@ import {
   IoArrowForward,
   IoArrowForwardOutline,
 } from 'react-icons/io5'
+import { isMobile } from 'react-device-detect'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { ScrollContext } from '../scroll-observer'
 
@@ -52,40 +53,30 @@ export default function Hero({ scrollToSolution }: P) {
           progress === 0 ? 'relative' : 'sticky -z-50'
         } top-0  overflow-hidden min-h-screen`}
       >
-        <div
-          style={{ left: width, transition: 'width 0.1s ease' }}
-          className="absolute h-full sm:hidden -translate-x-3 z-30 top-2/3"
-        >
-          <img
-            width={25}
-            src="https://global-uploads.webflow.com/625593a881b8ebd169835ca5/6272dd170459e2734bd53502_handlebar.svg"
-            alt=""
-          />
-        </div>
         <SVGBackground />
         <div className="flex bg-[#282c34] flex-col items-center justify-center min-h-screen w-full absolute">
-          <div className="flex z-20 w-10/12 md:w-9/12 gap-16 flex-1 flex-col items-center justify-center text-center text-white">
+          <div className="flex z-20 w-11/12 md:w-9/12 gap-16 flex-1 flex-col items-center justify-center text-center text-white">
             <div className="grow"></div>
             <div className="grow">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl mb-10">
+              <h1 className="text-5xl md:text-7xl mb-10">
                 Are you{' '}
                 <span className="text font font-extrabold opacity-100">
                   struggling
                 </span>{' '}
                 to learn to code
               </h1>
-              <h1 className="text-xl sm:text-4xl mb-10">
+              <h1 className="text-2xl sm:text-4xl mb-10">
                 Crawl out of the{' '}
                 <span className="text font font-extrabold opacity-100">
                   Tutorial Hell
                 </span>{' '}
                 and,{' '}
-                <h1 className="text-center gap-1 md:gap-2 mt-3 flex flex-row items-center justify-center w-full text-2xl lg:text-4xl font-bold">
+                <h1 className="text-center gap-1 md:gap-2 mt-3 flex flex-row items-center justify-center w-full text-xl lg:text-4xl font-bold">
                   Learn <IoArrowForward /> Build <IoArrowForward /> Discuss
                 </h1>
               </h1>
             </div>
-            <div className="grow-0 mb-10 md:mb-8 transition-all">
+            <div className="grow-0 mb-20 md:mb-8 transition-all">
               <a
                 onClick={() => scrollToSolution()}
                 className="flex flex-col w-full cursor-pointer items-center justify-center text-xl font-bold gap-2 text-white hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-2xl transition-all"
@@ -101,7 +92,10 @@ export default function Hero({ scrollToSolution }: P) {
 
         {/* Extra Background */}
         <div
-          style={{ width: width, transition: 'width 0.1s ease' }}
+          style={{
+            width: `${!isMobile ? width : '50%'}`,
+            transition: 'width 0.1s ease',
+          }}
           className="bg-[#ef3054] h-full absolute"
         ></div>
       </div>
