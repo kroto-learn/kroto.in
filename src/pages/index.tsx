@@ -4,8 +4,19 @@ import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 import { trpc } from "../utils/trpc";
+import Landing from "../components/landing";
 
 const Home: NextPage = () => {
+  return (
+    <div className="-mt-20">
+      <Landing />
+    </div>
+  );
+};
+
+export default Home;
+
+const Demo = () => {
   const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
 
   return (
@@ -54,14 +65,12 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
-
 const AuthShowcase: React.FC = () => {
   const { data: sessionData } = useSession();
 
   const { data: secretMessage } = trpc.auth.getSecretMessage.useQuery(
     undefined, // no input
-    { enabled: sessionData?.user !== undefined },
+    { enabled: sessionData?.user !== undefined }
   );
 
   return (

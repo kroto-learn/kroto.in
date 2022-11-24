@@ -5,14 +5,24 @@ import { SessionProvider } from "next-auth/react";
 import { trpc } from "../utils/trpc";
 
 import "../styles/globals.css";
+import ScrollObserver from "../components/scroll-observer";
+import Layout from "../components/layouts/main";
+import { AppProps } from "next/dist/shared/lib/router/router";
 
-const MyApp: AppType<{ session: Session | null }> = ({
+interface P extends AppProps {
+  session: Session | null;
+}
+
+const MyApp: AppType<P> = ({
   Component,
-  pageProps: { session, ...pageProps },
+  pageProps: { session, router, ...pageProps },
 }) => {
   return (
     <SessionProvider session={session}>
-      <Component {...pageProps} />
+      <ScrollObserver>
+        <Layout router={router} {...pageProps} />
+        <Component {...pageProps} />
+      </ScrollObserver>
     </SessionProvider>
   );
 };
