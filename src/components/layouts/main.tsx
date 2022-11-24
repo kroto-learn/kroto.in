@@ -3,11 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Navbar from "../navbar";
 
-interface P extends AppProps {
-  children: React.ReactNode;
-}
-
-export default function Layout({ children }: P) {
+export default function Layout({ children }: { children: any }) {
   const router = useRouter();
   return (
     <>
