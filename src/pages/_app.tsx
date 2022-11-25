@@ -8,7 +8,6 @@ import "../styles/globals.css";
 import ScrollObserver from "../components/scroll-observer";
 import Layout from "../components/layouts/main";
 import { AppProps } from "next/dist/shared/lib/router/router";
-import { useRouter } from "next/router";
 
 interface P extends AppProps {
   session: Session | null;
@@ -18,7 +17,6 @@ const MyApp: AppType<P> = ({
   Component,
   pageProps: { session, pageProps },
 }) => {
-  const router = useRouter();
   return (
     <SessionProvider session={session}>
       <ScrollObserver>

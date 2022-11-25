@@ -38,8 +38,9 @@ export default function Navbar({ path }: { path: string }) {
     <div
       className={`fixed ${
         scrollY < 200 && path === "/"
-          ? "top-0 right-0 left-0 my-2 "
-          : "top-2 left-2 right-2 rounded-lg bg-[#282c34]/50 backdrop-blur-lg sm:left-5 sm:right-5 md:top-5 md:left-10 md:right-10"
+          ? "top-2 left-2 right-2 rounded-lg bg-[#282c34]/30 backdrop-blur-lg sm:left-5 sm:right-5 md:top-5 md:left-10 md:right-10"
+          : // ? "top-0 right-0 left-0 my-2"
+            "top-2 left-2 right-2 rounded-lg bg-[#282c34]/50 backdrop-blur-lg sm:left-5 sm:right-5 md:top-5 md:left-10 md:right-10"
       }  z-50 mx-auto max-w-full p-2 transition-all md:max-w-[80%]`}
     >
       <div className="flex flex-col sm:flex-row sm:justify-between">
@@ -53,7 +54,7 @@ export default function Navbar({ path }: { path: string }) {
         </div>
         <div className="order-last hidden sm:block">
           <a href="#sign-up">
-            <button className="group inline-flex items-center gap-1 rounded-md bg-[#EF3054] px-5 py-2 text-base font-medium text-white shadow brightness-110 backdrop-blur-sm transition-all hover:scale-105 hover:text-opacity-100 active:scale-100">
+            <button className="group inline-flex items-center gap-1 rounded-md bg-[#EF3054] px-5 py-2 text-base font-medium text-white shadow backdrop-blur-sm transition-all hover:scale-105 hover:text-opacity-100 active:scale-100">
               Signup Now <IoArrowForward />
             </button>
           </a>
