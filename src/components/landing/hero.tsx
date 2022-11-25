@@ -9,7 +9,7 @@ import TextSection from "../blob-animation/text-section";
 import Card from "../blob-animation/card";
 
 interface P {
-  scrollToSolution: () => void;
+  scrollToSolution: any;
 }
 
 export default function Hero() {

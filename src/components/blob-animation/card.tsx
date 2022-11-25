@@ -21,6 +21,7 @@ export default function Card() {
         <a
           href={registrationFormUrl}
           target="_blank"
+          rel="noreferrer"
           type="button"
           className="mt-5 mr-2 rounded-lg bg-gradient-to-br from-[#ef3054] to-[#ef3054]/75 px-5 py-2.5 text-center text-xs font-medium text-white transition-all hover:bg-gradient-to-bl hover:no-underline focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 md:text-lg"
         >
