@@ -33,6 +33,20 @@ export default function Hero() {
       >
         {/* <BlobAnimated /> */}
         <NewHero />
+
+        <div className="flex items-center justify-center">
+          <div className="absolute bottom-14 transition-all">
+            <a
+              // onClick={() => scrollToSolution()}
+              className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 text-xl font-bold text-white transition-all hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-2xl"
+            >
+              <span className="transition-all">Learn How</span>
+              <span className="animate-bounce transition-all">
+                <IoArrowDown />
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );
@@ -165,9 +179,9 @@ export function OldHero({ scrollToSolution }: P) {
 export function NewHero() {
   return (
     <div className="isolate">
-      <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-30rem]">
+      <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu animate-blob overflow-hidden blur-3xl sm:top-[-30rem]">
         <svg
-          className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+          className="relative left-[calc(50%-8rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-40rem)] sm:h-[42.375rem]"
           viewBox="0 0 1155 678"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -192,6 +206,11 @@ export function NewHero() {
           </defs>
         </svg>
       </div>
+      <div className="absolute flex w-full translate-y-24 rotate-90 items-center justify-center gap-5 sm:translate-y-56 sm:rotate-0">
+        <div className="absolute left-96 top-0 h-72 w-72 animate-blob rounded-full bg-purple-300 opacity-50 mix-blend-multiply blur-3xl filter"></div>
+        <div className="top-42 blur-3l absolute right-80 h-72 w-72 animate-blob rounded-full bg-pink-300 opacity-50 mix-blend-multiply blur-3xl filter"></div>
+        <div className="absoulte top-64 m-10 h-72 w-72 translate-x-10 space-y-4 rounded-full bg-[#4C496C]  mix-blend-multiply blur-3xl filter"></div>
+      </div>
       <main>
         <div className="relative px-6 lg:px-8">
           <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
@@ -208,7 +227,7 @@ export function NewHero() {
                 </div>
               </div>
               <div>
-                <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-7xl">
+                <h1 className="mt-10 text-5xl font-bold tracking-tight sm:mt-0 sm:text-center sm:text-7xl">
                   This is the right way to <br />
                   <span className="text-[#ef3054]">learn to code</span>
                 </h1>
@@ -251,7 +270,7 @@ export function NewHero() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-40rem)]">
+              <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 hidden transform-gpu animate-blob overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
                 <svg
                   className="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
                   viewBox="0 0 1155 678"

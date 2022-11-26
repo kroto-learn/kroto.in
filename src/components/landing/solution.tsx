@@ -40,7 +40,7 @@ const Stats: React.FC = () => {
       id="solution-section"
       className="bg-[#21252C] text-white"
     >
-      <div className="mx-auto flex min-h-screen max-w-[70vw] flex-col items-start justify-center px-10 py-24 text-center text-5xl font-thin sm:text-left md:py-28 md:text-5xl lg:py-36 lg:text-8xl">
+      <div className="mx-auto flex min-h-screen max-w-[70vw] flex-col items-start justify-center px-0 py-24 text-4xl font-thin sm:text-left md:py-28 md:text-5xl lg:py-36 lg:text-8xl">
         <div className="flex flex-col gap-10">
           <span
             style={{ opacity: opacityForBlock(progress, 0) }}
