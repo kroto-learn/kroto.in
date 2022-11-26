@@ -1,4 +1,5 @@
 import { IoArrowDown, IoArrowForward } from "react-icons/io5";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { useContext, useEffect, useRef, useState } from "react";
 import { ScrollContext } from "../scroll-observer";
 import styled from "styled-components";
@@ -12,7 +13,7 @@ interface P {
   scrollToSolution: any;
 }
 
-export default function Hero() {
+export default function Hero({ scrollToSolution }: P) {
   const refContainer = useRef<HTMLDivElement>(null);
   const { scrollY } = useContext(ScrollContext);
 
@@ -35,9 +36,9 @@ export default function Hero() {
         <NewHero />
 
         <div className="flex items-center justify-center">
-          <div className="absolute bottom-14 transition-all">
+          <div className="absolute bottom-24 transition-all md:bottom-10">
             <a
-              // onClick={() => scrollToSolution()}
+              onClick={() => scrollToSolution()}
               className="flex w-full cursor-pointer flex-col items-center justify-center gap-2 text-xl font-bold text-white transition-all hover:scale-110 active:scale-95 md:py-4 md:px-10 md:text-2xl"
             >
               <span className="transition-all">Learn How</span>
@@ -206,22 +207,24 @@ export function NewHero() {
           </defs>
         </svg>
       </div>
-      <div className="absolute flex w-full translate-y-24 rotate-90 items-center justify-center gap-5 sm:translate-y-56 sm:rotate-0">
-        <div className="absolute left-96 top-0 h-72 w-72 animate-blob rounded-full bg-purple-300 opacity-50 mix-blend-multiply blur-3xl filter"></div>
-        <div className="top-42 blur-3l absolute right-80 h-72 w-72 animate-blob rounded-full bg-pink-300 opacity-50 mix-blend-multiply blur-3xl filter"></div>
+      <div className="absolute flex w-full translate-y-24 rotate-90 items-center justify-center sm:translate-y-56 sm:rotate-0">
         <div className="absoulte top-64 m-10 h-72 w-72 translate-x-10 space-y-4 rounded-full bg-[#4C496C]  mix-blend-multiply blur-3xl filter"></div>
+        <div className="absolute left-96 top-0 h-72 w-72 animate-blob rounded-full bg-purple-300 opacity-50 mix-blend-multiply blur-3xl filter"></div>
+        <div className="top-42 blur-3l absolute right-80 h-72 w-72 animate-blob rounded-full bg-pink-300 opacity-50 mix-blend-multiply blur-2xl filter"></div>
       </div>
       <main>
         <div className="relative px-6 lg:px-8">
           <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
             <div>
               <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-white/20 transition-all hover:ring-white/50">
-                  <span className="text-white">
-                    Title of the latest event goes here{" "}
-                    <a href="#" className="font-semibold text-[#ef3054]">
-                      <span className="absolute inset-0" aria-hidden="true" />
-                      Read more <span aria-hidden="true">&rarr;</span>
+                <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-lg leading-6 ring-1 ring-white/20 transition-all hover:ring-white/50">
+                  <span className="flex items-center gap-1 text-white">
+                    How to become an internship ready developer?{" "}
+                    <a
+                      href="#"
+                      className="flex items-center gap-1 font-semibold text-[#ef3054] transition-all hover:gap-2"
+                    >
+                      Read more <BsFillArrowRightCircleFill />
                     </a>
                   </span>
                 </div>

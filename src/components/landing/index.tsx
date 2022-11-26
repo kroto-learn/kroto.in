@@ -15,7 +15,7 @@ export default function Landing() {
   const scrollToSolution = () => scrollToRef(solutionRef);
   return (
     <div>
-      <Hero />
+      <Hero scrollToSolution={scrollToSolution} />
       {/* <TutorialHell scrollToSolution={scrollToSolution} /> */}
 
       <div ref={solutionRef}>
