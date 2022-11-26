@@ -69,7 +69,7 @@ export default function Signup() {
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-6xl">
                   Take charge of your learning
                 </h2>
-                <p className="mb-10 pt-4 text-center text-xl text-white sm:text-2xl">
+                <div className="mb-10 pt-4 text-center text-xl text-white sm:text-2xl">
                   Crawl out of the{" "}
                   <span className="text font font-extrabold opacity-100">
                     Tutorial Hell
@@ -78,7 +78,7 @@ export default function Signup() {
                   <h1 className="mt-3 flex w-full flex-row items-center justify-center gap-1 text-center text-lg font-bold md:gap-2 lg:text-xl">
                     Learn <IoArrowForward /> Build <IoArrowForward /> Discuss
                   </h1>
-                </p>
+                </div>
               </div>
               <form className="mt-12 sm:mx-auto sm:flex sm:max-w-lg">
                 <div className="min-w-0 flex-1">
