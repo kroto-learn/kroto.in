@@ -179,7 +179,7 @@ export function OldHero({ scrollToSolution }: P) {
 export function NewHero() {
   return (
     <div className="isolate">
-      <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu animate-blob overflow-hidden blur-3xl sm:top-[-30rem]">
+      <div className="absolute inset-x-0 top-[-10rem] -z-10 hidden transform-gpu animate-blob overflow-hidden blur-3xl sm:top-[-30rem]">
         <svg
           className="relative left-[calc(50%-8rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-40rem)] sm:h-[42.375rem]"
           viewBox="0 0 1155 678"
